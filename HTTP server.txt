@@ -1,0 +1,5 @@
+python -m http.server 8000
+
+Windows: ipconfig 找IP位置
+
+http://XXX.XXX.XX.XX:8000/index.html

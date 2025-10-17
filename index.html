@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>漢字閃卡</title>
+
+  <!-- 讀取 Excel -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <h1>漢字閃卡</h1>
+    </header>
+
+    <div class="row">
+      <select id="level">
+        <option value="N5">N5</option>
+        <option value="N4">N4</option>
+      </select>
+
+      <select id="lesson" disabled></select>
+      <div class="meta">
+        <span id="count" class="badge">— / —</span>
+        <span id="known" class="badge">已記住：0</span>
+      </div>
+    </div>
+
+    <div id="cardWrap" class="card-wrap hidden">
+      <div id="card" class="card" aria-live="polite">
+        <div class="inner">
+          <div class="face front">
+            <div class="sub" id="frontLabel">漢字（正面）</div>
+            <div id="front" class="jp">—</div>
+          </div>
+          <div class="face back">
+            <div class="sub" id="backLabel">—</div>
+            <div id="back" class="jp"></div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="meta" id="status"></div>
+        <div class="btns">
+          <button id="btnRemember" class="btn-remember">已記住</button>
+          <button id="btnNext" class="btn-next">下一張</button>
+        </div>
+      </div>
+      <div class="footer-hint">提示：點卡片左半邊翻「中文」，右半邊翻「片假名」。背面再點一下可回正面。</div>
+    </div>
+
+    <div id="empty" class="empty">正在嘗試自動載入頁面</div>
+  </div>
+</body>
+
+<script src="main.js"></script>
+
+<script>
+  $(document).bind("contextmenu copy selectstart", function() {
+    return false;
+  });
+</script>
+
+</html>
