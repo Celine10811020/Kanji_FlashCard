@@ -2,7 +2,7 @@
 const state = {
   data: [],              // 全部資料
   lessons: [],           // 可選課次
-  currentLevel: null,    // 當前 Level：'A1' | 'A2'
+  currentLevel: null,    // 當前 Level
   currentLesson: null,   // 當前課次
   indices: [],           // 當前課次的索引（未移除），作為抽卡池
   currentIdx: null,      // 目前抽到的索引（在 filtered 的索引）
@@ -148,6 +148,7 @@ function populateLessonOptions(){
 
 // === 載入某個 Level 的 Excel ===
 const LEVEL_FILES = {
+  N3: 'N3.xlsx',
   N4: 'N4.xlsx',
   N5: 'N5.xlsx',
 };
@@ -186,9 +187,6 @@ async function loadLevel(level){
     // UI
     el.empty.textContent = '請從上方選單選擇 Lesson 開始練習。';
     el.cardWrap.classList.add('hidden');
-
-    // 若想預設選到最小的 Lesson，可解除以下兩行註解
-    // if (state.lessons.length) { el.lesson.value = state.lessons[0]; state.currentLesson = el.lesson.value; buildLessonDeck(); }
 
   }catch(err){
     console.error(err);
@@ -243,5 +241,5 @@ window.addEventListener('keydown', (e)=>{
   else if(e.key==='Enter'){ rememberCard(); }
 });
 
-// 啟動（預設 A2）
-loadLevel('N5');
+// 啟動（預設）
+loadLevel('N3');
