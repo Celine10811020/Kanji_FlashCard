@@ -1,4 +1,4 @@
-# Kanji FlashCard｜JLPT N5 / N4 漢字閃卡
+# Kanji FlashCard｜JLPT N5 / N4 / N3 漢字閃卡
 
 A browser-based kanji flashcard app for **JLPT N5, N4 and N3** learning.
 
