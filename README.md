@@ -12,7 +12,7 @@ Built with **HTML, CSS, and JavaScript**, this project provides a simple lesson-
 
 Kanji FlashCard is a lightweight web app designed for kanji memorization practice.
 
-The app currently supports **JLPT N5, N4 and N3** levels, with content organized by **Lesson** (Use textbook [にほんごチャレンジ N4・N5](https://amzn.asia/d/0aTRMkgI) and [日本語総まとめ N3漢字](https://amzn.asia/d/03uNjgUs)).
+The app currently supports **JLPT N5, N4 and N3** levels, with content organized by **Lesson** (Use textbook [にほんごチャレンジ N4・N5](https://amzn.asia/d/0aTRMkgI), [日本語総まとめ N3漢字](https://amzn.asia/d/03uNjgUs)) and [大学・大学院留学生の日本語1 読解編](https://amzn.asia/d/0e0dvhDe).
 Each flashcard shows the **kanji on the front**, and users can flip the card to reveal either the **Chinese meaning** or the **katakana reading**.
 
 This project is designed to make repeated kanji review simple, fast, and accessible in a browser.
